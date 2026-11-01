@@ -241,9 +241,9 @@ html,body{overflow-x:hidden}
   <section class="card">
     <h2 class="label"><b>3</b>Дополнительно</h2>
     <div class="toggles">
-      <label class="tog" id="tOutside"><span><b>Адрес за МКАД</b><small>+60 ₽ за каждый км от МКАД</small></span><span class="sw"><input type="checkbox" id="outside"><i></i></span></label>
+      <label class="tog" id="tOutside"><span><b>Адрес за МКАД</b><small>+92 ₽ за каждый км от МКАД</small></span><span class="sw"><input type="checkbox" id="outside"><i></i></span></label>
       <div id="outsideKm" class="km" hidden><input type="range" id="okm" min="1" max="100" value="10" aria-label="Километров за МКАД"><output id="okmOut" class="num">10 км</output></div>
-      <label class="tog" id="tSign"><span><b>Встреча с табличкой</b><small>+300 ₽ · с вашим именем</small></span><span class="sw"><input type="checkbox" id="sign"><i></i></span></label>
+      <label class="tog" id="tSign"><span><b>Встреча с табличкой</b><small>+450 ₽ · с вашим именем</small></span><span class="sw"><input type="checkbox" id="sign"><i></i></span></label>
       <label class="tog" id="tRet"><span><b>Туда и обратно</b><small>скидка 10% на обе поездки</small></span><span class="sw"><input type="checkbox" id="ret"><i></i></span></label>
       <label class="tog"><span><b>Детские кресла</b><small>бесплатно, укажите возраст в комментарии</small></span><span class="sw"><input type="checkbox" id="kids"><i></i></span></label>
     </div>
@@ -251,8 +251,8 @@ html,body{overflow-x:hidden}
 
   <section class="fare" aria-live="polite">
     <div class="fare-top">
-      <div><div class="label" style="margin-bottom:6px">Фиксированная цена</div><div class="fare-total num" id="total">3 900 ₽</div></div>
-      <div class="fare-per"><b class="num" id="perPax">975 ₽</b><small>на одного пассажира</small></div>
+      <div><div class="label" style="margin-bottom:6px">Фиксированная цена</div><div class="fare-total num" id="total">6 000 ₽</div></div>
+      <div class="fare-per"><b class="num" id="perPax">1 500 ₽</b><small>на одного пассажира</small></div>
     </div>
     <div class="bar" id="bar"></div>
     <div class="legend" id="legend"></div>
@@ -306,17 +306,17 @@ html,body{overflow-x:hidden}
 </div>
 </main>
 
-<div class="submit" id="ownSubmit"><button id="submitBtn" type="button">Заказать за 3 900 ₽</button></div>
+<div class="submit" id="ownSubmit"><button id="submitBtn" type="button">Заказать за 6 000 ₽</button></div>
 
 <script>
 /* ===== Цены: те же, что в pricing.py бота (сервер пересчитывает сам) ===== */
-const P = { bizFactor:1.6, sign:300, outsideKm:60, city:3000, kmStd:60, kmBiz:95, minIntercity:6000,
-            hourStd:2000, hourBiz:4000, minHours:3, returnDiscount:0.10 };
+const P = { bizFactor:1.6, sign:450, outsideKm:92, city:4600, kmStd:92, kmBiz:146, minIntercity:9200,
+            hourStd:3100, hourBiz:6200, minHours:3, returnDiscount:0.10 };
 const AIRPORTS = [
-  {code:"SVO", name:"Шереметьево", price:3900, min:50, km:35},
-  {code:"VKO", name:"Внуково", price:3700, min:45, km:30},
-  {code:"DME", name:"Домодедово", price:4500, min:60, km:45},
-  {code:"ZIA", name:"Жуковский", price:5200, min:75, km:55},
+  {code:"SVO", name:"Шереметьево", price:6000, min:50, km:35},
+  {code:"VKO", name:"Внуково", price:5700, min:45, km:30},
+  {code:"DME", name:"Домодедово", price:6900, min:60, km:45},
+  {code:"ZIA", name:"Жуковский", price:8000, min:75, km:55},
 ];
 const STATIONS = ["Белорусский","Казанский","Киевский","Курский","Ленинградский","Павелецкий","Рижский","Савёловский","Ярославский","Поездка по Москве"];
 const CITIES = [["Сергиев Посад",70],["Тверь",170],["Тула",180],["Калуга",180],["Владимир",180],["Рязань",200],["Ярославль",265],["Иваново",300],["Кострома",340],["Орёл",365],["Брянск",380],["Смоленск",400],["Нижний Новгород",420],["Липецк",440],["Воронеж",520],["Курск",530],["Санкт-Петербург",710]];
